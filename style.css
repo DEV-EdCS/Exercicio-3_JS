@@ -1,0 +1,16 @@
+:root:has(#tema:checked) {
+    --background: rgb(45, 45, 45);
+    --color: white;
+}
+
+label:has(#tema){
+    cursor: pointer;
+}
+
+label:has(#tema:checked)::after {
+    content: "claro";
+}
+
+label:has(#tema:not(:checked))::after {
+    content: "escuro";
+}
