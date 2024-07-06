@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Confirmação de Senha</title>
+    <script>
+        function checkPasswordMatch() {
+            let password = document.getElementById("password").value;
+            let confirmPassword = document.getElementById("confirmPassword").value;
+            let message = document.getElementById("message");
+            
+            if (password === confirmPassword) {
+                message.style.color = "green";
+                message.innerText = "As senhas são iguais";
+            } else {
+                message.style.color = "red";
+                message.innerText = "As senhas não são iguais";
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Confirmação de Senha</h1>
+    <input type="password" id="password" placeholder="Digite sua senha" onkeyup="checkPasswordMatch()">
+    <input type="password" id="confirmPassword" placeholder="Confirme sua senha" onkeyup="checkPasswordMatch()">
+    <p id="message"></p>
+</body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Boas-vindas</title>
+    <script>
+        function welcomeUser() {
+            let name = prompt("Por favor, insira seu nome:");
+            if (name) {
+                document.getElementById("welcomeMessage").innerText = "Bem-vindo, " + name + "!";
+            }
+        }
+    </script>
+</head>
+<body onload="welcomeUser()">
+    <h1 id="welcomeMessage"></h1>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Verificação de Identidade</title>
+    <script>
+        function checkIdentity() {
+            let hasID = true; // Suponha que ele tenha um documento de identidade
+            let hasDriverLicense = false; // Suponha que ele não tenha uma carteira de motorista
+
+            if (hasID || hasDriverLicense) {
+                document.getElementById("message").innerText = "Raimundo pode fazer a prova.";
+            } else {
+                document.getElementById("message").innerText = "Raimundo não pode fazer a prova.";
+            }
+        }
+    </script>
+</head>
+<body onload="checkIdentity()">
+    <h1>Verificação de Identidade</h1>
+    <p id="message"></p>
+</body>
+</html>

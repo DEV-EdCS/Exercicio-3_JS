@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mostrar/Ocultar Senha</title>
+    <script>
+        function togglePassword() {
+            let passwordField = document.getElementById("password");
+            let toggleButton = document.getElementById("toggleButton");
+            if (passwordField.type === "password") {
+                passwordField.type = "text";
+                toggleButton.innerText = "Ocultar";
+            } else {
+                passwordField.type = "password";
+                toggleButton.innerText = "Mostrar";
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Mostrar/Ocultar Senha</h1>
+    <input type="password" id="password" placeholder="Digite sua senha">
+    <button id="toggleButton" onclick="togglePassword()">Mostrar</button>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lâmpada</title>
+    <style>
+        body {
+            text-align: center;
+            transition: background-color 0.5s;
+        }
+    </style>
+    <script>
+        let isOn = false;
+        
+        function toggleLamp() {
+            let lamp = document.getElementById("lamp");
+            isOn = !isOn;
+            lamp.src = isOn ? "lamp_on.png" : "lamp_off.png";
+            document.body.style.backgroundColor = isOn ? "yellow" : "white";
+        }
+    </script>
+</head>
+<body>
+    <h1>Lâmpada</h1>
+    <img id="lamp" src="lamp_off.png" alt="Lâmpada">
+    <br>
+    <button onclick="toggleLamp()">Ligar/Desligar</button>
+</body>
+</html>
